@@ -6,7 +6,7 @@ module AXI4_Lite_TB (
     reg ACLK_tb , ARESETN_tb ,RD_EN_TB;
     reg [3:0]  WSTRB_tb ;
     wire [31:0] RDATA_tb1 ,RDATA_golden_tb1 ;
-    AXI4_Lite_Master dut1 (.ARADDR(ARADDR_tb) , .AWADDR(AWADDR_tb) , .WDATA(WDATA_tb) , 
+    AXI4_Lite_top dut1 (.ARADDR(ARADDR_tb) , .AWADDR(AWADDR_tb) , .WDATA(WDATA_tb) , 
     .WSTRB(WSTRB_tb) , .ACLK(ACLK_tb) , .ARESETN(ARESETN_tb) , .RDATA(RDATA_tb1));
     AXI4_Lite_golden golden1 (.ARADDR_golden(ARADDR_tb) , .AWADDR_golden(AWADDR_tb) , .WDATA_golden(WDATA_tb) , .RD_EN(RD_EN_TB) , 
     .WSTRB_golden(WSTRB_tb) , .ACLK_golden(ACLK_tb) , .ARESETN_golden(ARESETN_tb) , .RDATA_golden(RDATA_golden_tb1));
