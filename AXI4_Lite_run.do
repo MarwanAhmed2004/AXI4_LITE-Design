@@ -1,5 +1,5 @@
 vlib work
-vlog AXI4-Lite_Master.v AXI4-Lite_Slave.v AXI4-Lite_Ram.v AXI4-Lite_golden.v AXI4-Lite_tb.v
+vlog AXI4-Lite_top.v AXI4-Lite_Master.v AXI4-Lite_Slave.v AXI4-Lite_Ram.v AXI4-Lite_golden.v AXI4-Lite_tb.v
 vsim -voptargs=+acc work.AXI4_Lite_TB
 add wave *
 add wave -position insertpoint  \
